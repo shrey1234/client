@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-sm bg-success navbar-dark">
-  <a class="navbar-brand" href="#">
+  <a class="navbar-brand" href="main">
     Web School
   </a>
   
@@ -10,14 +10,17 @@
   </li>
   
   <li class="nav-item">
-  <a class="nav-link"  routerLink="about">About</a>
+  <a class="nav-link"  target="_blank" href="https://webschool.auth.us-east-1.amazoncognito.com/login?client_id=a3s33mlkerp3citp4bv56j2rs&response_type=code&scope=email+openid&redirect_uri=http://localhost:4200/dashboard">Login</a>
   </li>
+
+  <li class="nav-item">
+    <a class="nav-link"  target="_blank" href="https://webschool.auth.us-east-1.amazoncognito.com/logout?client_id=a3s33mlkerp3citp4bv56j2rs&logout_uri=http://localhost:4200/">Logout</a>  
+    </li>
   </ul>
   </div>
   
   </nav>
-  <h1>Elementary School</h1>
-  Welcome to Web School
+  
   
   <div>
     <router-outlet></router-outlet>
