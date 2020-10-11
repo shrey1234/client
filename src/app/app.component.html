@@ -1,27 +1,2 @@
-<nav class="navbar navbar-expand-sm bg-success navbar-dark">
-  <a class="navbar-brand" href="main">
-    Web School
-  </a>
-  
-  <div class="collapse navbar-collapse" id="navbar">
-  <ul class="navbar-nav mr-auto">
-    <li class="nav-item">
-  <a class="nav-link" routerLink="setting">Settings</a>
-  </li>
-  
-  <li class="nav-item">
-  <a class="nav-link"  target="_blank" href="https://webschool.auth.us-east-1.amazoncognito.com/login?client_id=a3s33mlkerp3citp4bv56j2rs&response_type=code&scope=email+openid&redirect_uri=http://localhost:4200/dashboard">Login</a>
-  </li>
-
-  <li class="nav-item">
-    <a class="nav-link"  target="_blank" href="https://webschool.auth.us-east-1.amazoncognito.com/logout?client_id=a3s33mlkerp3citp4bv56j2rs&logout_uri=http://localhost:4200/">Logout</a>  
-    </li>
-  </ul>
-  </div>
-  
-  </nav>
-  
-  
-  <div>
-    <router-outlet></router-outlet>
-  </div>
+<app-header></app-header>
+<router-outlet></router-outlet>
