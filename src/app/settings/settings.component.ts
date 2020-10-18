@@ -12,9 +12,9 @@ export class SettingsComponent implements OnInit {
   constructor(private dataService : DataService) { }
 
   ngOnInit() {
-    this.dataService.getVideos().subscribe((data:any[])=>{
+    /*this.dataService.getVideos().subscribe((data:any[])=>{
     this.videos=data;
-  }    )
+  })*/
   }
 
 }

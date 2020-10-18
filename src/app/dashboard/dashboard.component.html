@@ -1,2 +1,21 @@
-<p>Welcome You have successfully logged in system!</p>
+<p>Welcome {{this.dataService.username}} You have successfully logged in system as {{this.dataService.role}}</p>
 
+<ul class="nav flex-column">
+    <li class="nav-item">
+      <a *ngIf="this.dataService.role === 'student'" class="nav-link active" href="#">Subjects</a>
+    </li>
+    <li class="nav-item">
+      <a *ngIf="this.dataService.role === 'student'" class="nav-link" href="#">Classes</a>
+    </li>
+    <li class="nav-item">
+      <a *ngIf="this.dataService.role === 'student'" class="nav-link" href="#">Grades</a>
+    </li>
+    <li class="nav-item">
+      <a *ngIf="this.dataService.role === 'student'" class="nav-link " href="#">Assignments</a>
+    </li>
+    <li class="nav-item">
+      <a *ngIf="this.dataService.role === 'teacher'" class="nav-link " href="#">Announcements</a>
+    </li>
+  </ul>
+
+  
