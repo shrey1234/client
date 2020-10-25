@@ -3,22 +3,21 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { SettingsComponent } from './settings/settings.component';
 import { HttpClientModule } from '@angular/common/http';
-import { DashboardComponent } from './dashboard/dashboard.component';
-import { HeaderComponent } from './header/header.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {DefaultModule} from './layouts/default/default.module';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    SettingsComponent,
-    DashboardComponent,
-    HeaderComponent
-  ],
+  ], 
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule,
+    DefaultModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
