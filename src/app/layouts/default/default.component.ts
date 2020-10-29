@@ -12,7 +12,7 @@ export class DefaultComponent implements OnInit {
 
   ngOnInit() {}
 
-  sideBarToggler() {
+  sideBarToggler(event: Event) {
     this.sideBarOpen = !this.sideBarOpen;
   }
 }
