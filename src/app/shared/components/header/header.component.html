@@ -7,9 +7,15 @@
        <div fxFlex fxLayout="row" fxLayoutAlign="flex-end">
            <ul fxLayout="row" fxLayoutGap="20px">
                <li>
-                   <button mat-icon-button>
+                   <button mat-icon-button [matMenuTriggerFor]="settings">
                        <mat-icon>settings</mat-icon>
                    </button>
+                   <mat-menu #settings="matMenu">
+                    <button mat-menu-item (click)="openModal()">
+                        <mat-icon>exit_to_app</mat-icon>
+                        Change profile picture
+                    </button>
+                </mat-menu>
                </li>
                <li>
                 <button mat-icon-button>
@@ -21,10 +27,16 @@
                         <mat-icon>person_outline</mat-icon>
                     </button>
                     <mat-menu #menu="matMenu">
-                      <button mat-menu-item> 
-                          <mat-icon>exit_to_app</mat-icon>
-                          Sign out
-                      </button>
+                      
+                      <button mat-menu-item *ngIf="this.dataService.username !== ''"> 
+                        <mat-icon>exit_to_app</mat-icon>
+                        Sign out
+                    </button>
+                    <button mat-menu-item *ngIf="this.dataService.username === ''"> 
+                      <mat-icon>exit_to_app</mat-icon>
+                      Sign in
+                  </button>
+                  
                     </mat-menu>
                 </li>
            </ul>

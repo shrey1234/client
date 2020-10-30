@@ -7,10 +7,15 @@ import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {DefaultModule} from './layouts/default/default.module';
 
+import { MatButtonModule } from '@angular/material/button';
+import { MatDialogModule } from '@angular/material/dialog';
+import { ProfilepicComponent } from './modules/profilepic/profilepic.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
+    ProfilepicComponent,
   ], 
   imports: [
     BrowserModule,
@@ -18,8 +23,11 @@ import {DefaultModule} from './layouts/default/default.module';
     HttpClientModule,
     BrowserAnimationsModule,
     DefaultModule,
+    MatButtonModule,
+    MatDialogModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
+  //entryComponents: [ProfilepicComponent]
 })
 export class AppModule { }
