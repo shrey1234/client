@@ -3,21 +3,20 @@ import { Routes, RouterModule } from '@angular/router';
 import { DashboardComponent } from './modules/dashboard/dashboard.component';
 import { DefaultComponent } from './layouts/default/default.component';
 import { PostsComponent } from './modules/posts/posts.component';
+import { LandingComponent }  from './modules/landing/landing.component';
 
 const routes: Routes = [{
   path:'',
   component: DefaultComponent,
-  children:[{
-    path:'',
-    component: DashboardComponent,
-  },{
-      path:'posts',
-      component: PostsComponent,
-   }]
+  children:[
+    {path: '', component: LandingComponent },
+    {path:'user',component: DashboardComponent},
+    {path:'posts',component: PostsComponent,}
+  ]
 }];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
 export class AppRoutingModule { }

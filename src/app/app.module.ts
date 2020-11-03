@@ -10,12 +10,14 @@ import {DefaultModule} from './layouts/default/default.module';
 import { MatButtonModule } from '@angular/material/button';
 import { MatDialogModule } from '@angular/material/dialog';
 import { ProfilepicComponent } from './modules/profilepic/profilepic.component';
+import { LandingComponent } from './modules/landing/landing.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     ProfilepicComponent,
+    LandingComponent,
   ], 
   imports: [
     BrowserModule,

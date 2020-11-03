@@ -4,7 +4,7 @@
            <mat-icon>menu</mat-icon>
        </button>
        <span> Web School </span>
-       <div fxFlex fxLayout="row" fxLayoutAlign="flex-end">
+       <div *ngIf="this.dataService.username !== ''" fxFlex fxLayout="row" fxLayoutAlign="flex-end">
            <ul fxLayout="row" fxLayoutGap="20px">
                <li>
                    <button mat-icon-button [matMenuTriggerFor]="settings">
@@ -17,29 +17,27 @@
                     </button>
                 </mat-menu>
                </li>
-               <li>
-                <button mat-icon-button>
-                    <mat-icon>help_outline</mat-icon>
-                </button>
-                </li>
+               
                 <li>
                     <button mat-button [matMenuTriggerFor]="menu">
                         <mat-icon>person_outline</mat-icon>
                     </button>
                     <mat-menu #menu="matMenu">
-                      
-                      <button mat-menu-item *ngIf="this.dataService.username !== ''"> 
+                    <button mat-menu-item > 
                         <mat-icon>exit_to_app</mat-icon>
-                        Sign out
+                        <a href="https://schoolweb.auth.us-east-1.amazoncognito.com/logout?client_id=25eulrabo38ta954clqned59qj&logout_uri=http://localhost:4200">Sign out</a>
                     </button>
-                    <button mat-menu-item *ngIf="this.dataService.username === ''"> 
-                      <mat-icon>exit_to_app</mat-icon>
-                      Sign in
-                  </button>
-                  
                     </mat-menu>
                 </li>
+               
            </ul>
        </div>
+       <div *ngIf="this.dataService.username === ''" fxFlex fxLayout="row" fxLayoutAlign="flex-end">
+        <ul fxLayout="row" fxLayoutGap="20px">
+            <li>
+                <a class="sign" href="https://schoolweb.auth.us-east-1.amazoncognito.com/login?response_type=code&client_id=25eulrabo38ta954clqned59qj&redirect_uri=http://localhost:4200/user">Sign in</a>
+            </li>
+        </ul>
+    </div>
     </mat-toolbar-row>
 </mat-toolbar>

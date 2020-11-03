@@ -1,10 +1,10 @@
-<mat-nav-list>
+<mat-nav-list *ngIf="this.dataService.username !== ''">
     <div class="profile-card">
         <div class="header">
             <h2>{{this.dataService.username}} </h2>
             <h4>praveen.kumar@sjsu.edu</h4>
         </div>
-        <img src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Soufiane FADIL">
+        <img src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="No result">
     </div>
 
     <mat-divider></mat-divider>
@@ -24,3 +24,4 @@
     </a>
 
 </mat-nav-list>
+

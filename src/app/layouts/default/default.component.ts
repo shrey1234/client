@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DataService} from '../../data.service';
 
 @Component({
   selector: 'app-default',
@@ -8,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 export class DefaultComponent implements OnInit {
   
   sideBarOpen = true;
-  constructor() { }
+  constructor(public dataService : DataService) { }
 
   ngOnInit() {}
 
