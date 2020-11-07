@@ -8,6 +8,7 @@ import { MatDialogRef } from '@angular/material/dialog';
 })
 export class ProfilepicComponent implements OnInit {
   selectedFile: File
+  name: String
   constructor(public dialogRef: MatDialogRef<ProfilepicComponent>) { }
 
   ngOnInit(): void {
@@ -15,10 +16,12 @@ export class ProfilepicComponent implements OnInit {
  
   onFileChanged(event) {
     this.selectedFile = event.target.files[0]
-    console.log(this.selectedFile);
+    this.name=this.selectedFile.name;
+    //console.log(this.selectedFile.name);
   }
 
   onUpload() {
     // upload code goes here
+    
   }
 }

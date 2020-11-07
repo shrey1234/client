@@ -23,9 +23,9 @@
                         <mat-icon>person_outline</mat-icon>
                     </button>
                     <mat-menu #menu="matMenu">
-                    <button mat-menu-item > 
+                    <button mat-menu-item (click)="onLogoutClick()"> 
                         <mat-icon>exit_to_app</mat-icon>
-                        <a href="https://schoolweb.auth.us-east-1.amazoncognito.com/logout?client_id=25eulrabo38ta954clqned59qj&logout_uri=http://localhost:4200">Sign out</a>
+                        <a>Sign out</a>
                     </button>
                     </mat-menu>
                 </li>
@@ -35,7 +35,7 @@
        <div *ngIf="this.dataService.username === ''" fxFlex fxLayout="row" fxLayoutAlign="flex-end">
         <ul fxLayout="row" fxLayoutGap="20px">
             <li>
-                <a class="sign" href="https://schoolweb.auth.us-east-1.amazoncognito.com/login?response_type=code&client_id=25eulrabo38ta954clqned59qj&redirect_uri=http://localhost:4200/user">Sign in</a>
+                <a class="sign" href="https://schoolweb.auth.us-east-1.amazoncognito.com/login?response_type=code&client_id=25eulrabo38ta954clqned59qj&redirect_uri=http://localhost:4200/user/">Sign in</a>
             </li>
         </ul>
     </div>

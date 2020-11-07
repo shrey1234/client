@@ -12,12 +12,11 @@ export class HeaderComponent implements OnInit {
 
   @Output() toggleSideBarForMe: EventEmitter<any> = new EventEmitter();
   constructor(public dataService : DataService,public matDialog: MatDialog) {
-
    }
 
   ngOnInit() {
-    console.log(this.dataService.username);
-    console.log(this.dataService.role);
+    //console.log(this.dataService.username);
+    //console.log(this.dataService.role);
    }
 
   toggleSideBar() {
@@ -38,5 +37,13 @@ export class HeaderComponent implements OnInit {
     // https://material.angular.io/components/dialog/overview
     const modalDialog = this.matDialog.open(ProfilepicComponent, dialogConfig);
   }
+  onLogoutClick() {
+    const URL="https://schoolweb.auth.us-east-1.amazoncognito.com/logout?client_id=25eulrabo38ta954clqned59qj&logout_uri=http://localhost:4200/";
+    console.log("inside logout click");
+    localStorage.clear();
+    window.location.assign(URL);
+  }
+  
+  
 
 }

@@ -8,7 +8,11 @@ import { DataService} from '../../../data.service';
 })
 export class SidebarComponent implements OnInit {
 
-  constructor(public dataService : DataService) { }
+  constructor(public dataService : DataService) { 
+    console.log("username "+this.dataService.username);
+    console.log("role "+this.dataService.role);
+    console.log("email "+this.dataService.email);
+  }
 
   ngOnInit(): void {
   }
