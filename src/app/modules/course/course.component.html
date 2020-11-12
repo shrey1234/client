@@ -1,0 +1,10 @@
+<div fxLayout="row" fxLayoutAlign="space-between center" fxLayoutGap="20px" class="stats-cards">
+    <div *ngFor="let dsl of course_list">
+        <mat-card fxFlex="25" [routerLink]="['/coursePage',dsl.key]">
+             {{dsl.value}}
+        </mat-card>
+    </div>
+    
+</div>
+  
+

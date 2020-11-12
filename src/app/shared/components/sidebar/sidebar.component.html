@@ -1,4 +1,4 @@
-<mat-nav-list *ngIf="this.dataService.username !== ''">
+<mat-nav-list *ngIf="this.username !== ''">
     <div class="profile-card">
         <div class="header">
             <h2>{{this.dataService.username}} </h2>
@@ -12,7 +12,7 @@
 
     <a *ngIf="this.dataService.role === 'student'" mat-list-item routerLinkActive="list-item-active" routerLink="/">Dashboard</a>
     <a *ngIf="this.dataService.role === 'student'" mat-list-item routerLinkActive="list-item-active" routerLink="/posts">Inbox</a>
-    <a mat-list-item routerLinkActive="list-item-active" routerLink="/class">Classes</a>
+    <a mat-list-item routerLinkActive="list-item-active" routerLink="/course" >Classes</a>
     <a mat-list-item routerLinkActive="list-item-active" routerLink="/notice">Notice Board</a>
     <a mat-list-item routerLinkActive="list-item-active" routerLink="/fees">Fees</a>
     <a mat-list-item routerLinkActive="list-item-active" routerLink="/groups">Groups</a>

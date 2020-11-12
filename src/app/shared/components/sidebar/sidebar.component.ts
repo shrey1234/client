@@ -8,10 +8,22 @@ import { DataService} from '../../../data.service';
 })
 export class SidebarComponent implements OnInit {
 
+  public username:string="";
+  public role:string="";
+  public email:string="";
+
+
+
   constructor(public dataService : DataService) { 
-    console.log("username "+this.dataService.username);
-    console.log("role "+this.dataService.role);
-    console.log("email "+this.dataService.email);
+    //console.log("username "+this.dataService.username);
+    this.username=localStorage.getItem('username');
+    this.role=localStorage.getItem('role');
+
+    this.email=localStorage.getItem('email');
+
+    
+    //console.log("role "+this.dataService.role);
+    //console.log("email "+this.dataService.email);
   }
 
   ngOnInit(): void {

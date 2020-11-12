@@ -1,0 +1,27 @@
+<p>coursepage works!</p>
+<p>
+    <a class='btn btn-default' (click)="onBack()">Back </a>
+    
+</p>
+<div *ngFor="let assign of assignment">
+    <mat-card fxFlex="25" >
+         {{assign.url}} <br> {{assign.due_date}} <br> {{assign.Assignment_name}}
+    </mat-card>
+</div>
+
+<div >
+    <header >
+        <h1 >Create Assignemnt</h1>
+    </header>
+    <body >
+      <div>
+        <input type="file" (change)="onFileChange($event)" #fileInput><br>
+      </div>
+  <div>
+    <input type='text' id="name"  size=50 placeholder="Enter name of Assignemnt" name="Assignment name" #name (input)="onName(name.value)" ><br>
+    <input type='text' id="date"  size=40 placeholder="Enter due date of Assignemnt submission" name="due date " #date (input)="onDate(date.value)" ><br>
+  </div>
+  <button (click)="onUpload()">Upload!</button>
+    </body>
+    
+  </div>

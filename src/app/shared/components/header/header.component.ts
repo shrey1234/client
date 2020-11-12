@@ -10,13 +10,15 @@ import { ProfilepicComponent } from '../../../modules/profilepic/profilepic.comp
 })
 export class HeaderComponent implements OnInit {
 
+  public username:string="";
+
   @Output() toggleSideBarForMe: EventEmitter<any> = new EventEmitter();
   constructor(public dataService : DataService,public matDialog: MatDialog) {
    }
 
   ngOnInit() {
-    //console.log(this.dataService.username);
-    //console.log(this.dataService.role);
+    this.username=localStorage.getItem('username');
+
    }
 
   toggleSideBar() {
