@@ -11,7 +11,7 @@ const oauth = {
 
   scope : ['phone', 'email', 'profile', 'openid','aws.cognito.signin.user.admin'], 
 
-  redirectSignIn : 'http://localhost:4200/user/', 
+  redirectSignIn : 'http://localhost:4200/user', 
 
   redirectSignOut : 'http://localhost:4200/',
 
