@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { DataService} from '../../data.service';
 import {HttpClient } from '@angular/common/http';
 import { Subject } from 'rxjs';
-
+import { environment } from '../../../environments/environment';
 
 @Component({
   selector: 'app-course',
@@ -11,9 +11,8 @@ import { Subject } from 'rxjs';
 })
 export class CourseComponent implements OnInit {
 
-  public lambda_courses_url ="https://3kqv8usajd.execute-api.us-east-1.amazonaws.com/Stage/courses/"
+  public lambda_courses_url =environment.lambda_courses_url
   public course_string: string='';
-  //public course_list:Object[]=[];
   public username="";
 
   public subjectArray: {[key: string]: string} = {

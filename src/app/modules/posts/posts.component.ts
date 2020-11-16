@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import * as AWS from 'aws-sdk';
+import { environment } from '../../../environments/environment';
+
 
 @Component({
   selector: 'app-posts',
@@ -10,6 +13,9 @@ export class PostsComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    console.log('Base Api :' + environment.accessKeyId +
+            ' production? ' +  environment.secretAccessKey +
+            ' env: ' + environment.production);
   }
 
 }

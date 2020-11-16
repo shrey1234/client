@@ -3,13 +3,15 @@ import {HttpClient } from '@angular/common/http';
 import { Auth, auth0SignInButton } from 'aws-amplify'
 import Amplify, { API } from 'aws-amplify';
 import { threadId } from 'worker_threads';
+import { environment } from '../environments/environment';
+
 
 @Injectable({
   providedIn: 'root'
 })
 export class DataService {
 
-public lambda_role_url ="https://2avba4sn0a.execute-api.us-east-1.amazonaws.com/dev/role/"
+public lambda_role_url =environment.lambda_role_url;
 public username:string='';
 public role:string='';
 public email:string='';
@@ -30,7 +32,7 @@ public email:string='';
   getUsernameRole()
   {
     return Auth.currentAuthenticatedUser({
-      bypassCache: true
+      bypassCache: false
     }).then(user =>{
      this.username=user.username;
      localStorage.setItem('username', this.username);

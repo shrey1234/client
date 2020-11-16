@@ -12,8 +12,6 @@ export class SidebarComponent implements OnInit {
   public role:string="";
   public email:string="";
 
-
-
   constructor(public dataService : DataService) { 
     //console.log("username "+this.dataService.username);
     this.username=localStorage.getItem('username');
