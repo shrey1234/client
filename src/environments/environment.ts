@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  accessKeyId: "xxxxxxxxxxxx",
+  accessKeyId: "xxxxxxxxxxxxxx",
   secretAccessKey: "xxxxxxxxxxxxxx",
   lambda_courses_url:"https://b5y0xxipnj.execute-api.us-east-1.amazonaws.com/Stage/courses/",
   lambda_course_assign_url :"https://b5y0xxipnj.execute-api.us-east-1.amazonaws.com/Stage/",

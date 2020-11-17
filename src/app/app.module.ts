@@ -19,6 +19,8 @@ import { NoticeComponent } from './modules/notice/notice.component';
 import { StudentComponent } from './modules/student/student.component';
 
 
+import { MatCardModule } from '@angular/material/card';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 @NgModule({
   declarations: [
@@ -40,6 +42,8 @@ import { StudentComponent } from './modules/student/student.component';
     DefaultModule,
     MatButtonModule,
     MatDialogModule,
+    MatCardModule,
+    FlexLayoutModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

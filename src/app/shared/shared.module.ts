@@ -11,7 +11,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import {MatMenuModule} from '@angular/material/menu';
 import {MatListModule } from '@angular/material/list'
 import { RouterModule } from '@angular/router';
-
+import { MatCardModule } from '@angular/material/card';
 
 
 @NgModule({
@@ -31,6 +31,7 @@ import { RouterModule } from '@angular/router';
     MatMenuModule,
     MatListModule,
     RouterModule,
+    MatCardModule,
   ],
   exports:[
     HeaderComponent,

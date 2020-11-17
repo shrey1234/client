@@ -1,18 +1,30 @@
-<p>coursepage works!</p>
+<div>
+  <p>
+    <a class='btn btn-default' (click)="onBack()"> Back </a>
+  </p>
+  <mat-card class="example2-card" >
+  <button mat-button id ="create" *ngIf="this.role === 'student'" [routerLink]="['/createAssignment',id]"> Create assignment</button>
+</mat-card>
+</div>
 
 <div *ngFor="let assign of assignment">
-    <mat-card fxFlex="25" >
-         {{assign.url}} <br> {{assign.due_date}} <br> {{assign.Assignment_name}}
-         <img style="width:128px;height:128px;" src="{{assign.url}}"/>
-    </mat-card>
+    <mat-card  class="example-card" >
+      <mat-card-header>
+        <mat-card-title> Name : {{assign.Assignment_name}}</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <p>
+          Url: {{assign.url}}
+        </p>
+        <p>
+          Due date: {{assign.due_date}}
+        </p>
+      </mat-card-content>
+      
+      </mat-card>
 </div>
-<div>
-  <button id ="create" *ngIf="this.role === 'student'"  [routerLink]="['/createAssignment',id]"> Create assignment</button>
-  
-</div>
-<p>
-  <a class='btn btn-default' (click)="onBack()">Back </a>
-  
-</p>
+
+
+
 
 
