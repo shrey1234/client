@@ -16,9 +16,22 @@ export class CourseComponent implements OnInit {
   public username="";
 
   public subjectArray: {[key: string]: string} = {
-    AI: 'Artificial inTelligence',
-    ML: 'Machine learning',
-    DM: 'Data Mining'
+    M1: 'Mathematics_1',
+    M2: 'Mathematics_2',
+    M3: 'Mathematics_3',
+
+    C1: 'Computers_1',
+    C2: 'Computers_2',
+    C3: 'Computers_3',
+
+    H1: 'Hindi_1',
+    H2: 'Hindi_2',
+    H3: 'Hindi_3',
+
+    S1: 'Science_1',
+    S2: 'Science_2',
+    S3: 'Science_3',
+
 }
 
 course_list:any = [];
@@ -38,15 +51,8 @@ course_list:any = [];
      console.log(this.course_string);
      this.course_string.split(',').map(subject=>
         {
-            //this.course_list.push(this.subjectArray[subject]);
             this.course_list.push({key:subject,value: this.subjectArray[subject]});
             console.log("courselist new "+ this.course_list);
-
-            //console.log(subject);
-           // console.log(this.subjectArray[subject]);
-
-
-
         });
      });
      console.log("courselist new "+ this.course_list);
