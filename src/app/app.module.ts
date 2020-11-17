@@ -15,6 +15,8 @@ import { PaymentComponent } from './modules/payment/payment.component';
 import { CourseComponent } from './modules/course/course.component';
 import { CoursepageComponent } from './modules/coursepage/coursepage.component';
 import { CreateAssignmentComponent } from './modules/create-assignment/create-assignment.component';
+import { NoticeComponent } from './modules/notice/notice.component';
+import { StudentComponent } from './modules/student/student.component';
 
 
 
@@ -27,6 +29,8 @@ import { CreateAssignmentComponent } from './modules/create-assignment/create-as
     CourseComponent,
     CoursepageComponent,
     CreateAssignmentComponent,
+    NoticeComponent,
+    StudentComponent,
   ], 
   imports: [
     BrowserModule,
