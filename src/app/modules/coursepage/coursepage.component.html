@@ -1,17 +1,29 @@
-<p>coursepage works!</p>
+
 
 <div *ngFor="let assign of assignment">
-    <mat-card fxFlex="25" >
-         {{assign.url}} <br> {{assign.due_date}} <br> {{assign.Assignment_name}}
-    </mat-card>
+    <mat-card fxFlex="25" class="example-card" [routerLink]="['/coursePage',dsl.key]">
+      <mat-card-header>
+        <mat-card-title>{{assign.url}}</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <p>
+          {{assign.Assignment_name}}
+        </p>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-button>{{assign.due_date}}</button>
+      </mat-card-actions>
+      </mat-card>
 </div>
+
 <div>
-  <button id ="create" *ngIf="this.role === 'student'"  [routerLink]="['/createAssignment',id]"> Create assignment</button>
-  
+  <p>
+    <a class='btn btn-default' (click)="onBack()"> Back </a>
+  </p>
+  <mat-card>
+  <button mat-button id ="create" *ngIf="this.role === 'student'"  [routerLink]="['/createAssignment',id]"> Create assignment</button>
+</mat-card>
 </div>
-<p>
-  <a class='btn btn-default' (click)="onBack()">Back </a>
-  
-</p>
+
 
 

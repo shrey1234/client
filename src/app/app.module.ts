@@ -15,8 +15,8 @@ import { PaymentComponent } from './modules/payment/payment.component';
 import { CourseComponent } from './modules/course/course.component';
 import { CoursepageComponent } from './modules/coursepage/coursepage.component';
 import { CreateAssignmentComponent } from './modules/create-assignment/create-assignment.component';
-
-
+import { MatCardModule } from '@angular/material/card';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 @NgModule({
   declarations: [
@@ -36,6 +36,8 @@ import { CreateAssignmentComponent } from './modules/create-assignment/create-as
     DefaultModule,
     MatButtonModule,
     MatDialogModule,
+    MatCardModule,
+    FlexLayoutModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
