@@ -29,7 +29,7 @@ export class HeaderComponent implements OnInit {
       );
     }, 300);
   }
-  openModal() {
+ openModal() {
     const dialogConfig = new MatDialogConfig();
     // The user can't close the dialog by clicking outside its body
    // dialogConfig.disableClose = true;

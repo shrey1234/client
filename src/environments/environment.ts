@@ -4,15 +4,16 @@
 
 export const environment = {
   production: false,
-  accessKeyId: "xxxxxxxxxxxxxx",
-  secretAccessKey: "xxxxxxxxxxxxxx",
+  accessKeyId: "xxxxxxxxxxxxxxx",
+  secretAccessKey: "xxxxxxxxxxxxxxx",
   lambda_courses_url:"https://b5y0xxipnj.execute-api.us-east-1.amazonaws.com/Stage/courses/",
   lambda_course_assign_url :"https://b5y0xxipnj.execute-api.us-east-1.amazonaws.com/Stage/",
   lambda_role_url: "https://2avba4sn0a.execute-api.us-east-1.amazonaws.com/dev/role/",
   lambda_fees_fetch_url: "https://b5y0xxipnj.execute-api.us-east-1.amazonaws.com/Stage/fetch-fees/",
   lambda_fees_update_url :"https://b5y0xxipnj.execute-api.us-east-1.amazonaws.com/Stage/fees/",
-
-
+  lambda_notice_add:"https://b5y0xxipnj.execute-api.us-east-1.amazonaws.com/dev/notification/",
+  s3_bucket_url:"https://dogs-images-bucket.s3.amazonaws.com/",
+  bucket_name:"dogs-images-bucket",
 };
 
 /*

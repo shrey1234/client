@@ -1,7 +1,9 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
 import { Router,ActivatedRoute } from '@angular/router';
 import { environment } from '../../../environments/environment';
+import { SubmissionComponent } from '../submission/submission.component';
 
 @Component({
   selector: 'app-coursepage',
@@ -18,7 +20,7 @@ public lambda_course_assign_url =environment.lambda_course_assign_url
 
  assignment:any = [];
   constructor(private _Activatedroute:ActivatedRoute,
-    private _router:Router,private httpClient: HttpClient) {
+    private _router:Router,private httpClient: HttpClient,public matDialog: MatDialog) {
       this.role=localStorage.getItem('role')
 
      }
@@ -53,4 +55,18 @@ public lambda_course_assign_url =environment.lambda_course_assign_url
      this._router.navigate(['course']);
   }
 
+  openModal(Assignment_name) {
+    const dialogConfig = new MatDialogConfig();
+    // The user can't close the dialog by clicking outside its body
+   // dialogConfig.disableClose = true;
+    dialogConfig.id = "modal-component";
+    dialogConfig.height = "350px";
+    dialogConfig.width = "600px";
+    dialogConfig.data = {
+      id: this.id,
+      Assignment_name: Assignment_name,
+  };
+    // https://material.angular.io/components/dialog/overview
+    const modalDialog = this.matDialog.open(SubmissionComponent, dialogConfig);
+  }
 }

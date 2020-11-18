@@ -21,6 +21,7 @@ import { StudentComponent } from './modules/student/student.component';
 
 import { MatCardModule } from '@angular/material/card';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { SubmissionComponent } from './modules/submission/submission.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     CreateAssignmentComponent,
     NoticeComponent,
     StudentComponent,
+    SubmissionComponent,
   ], 
   imports: [
     BrowserModule,
