@@ -1,28 +1,28 @@
-<!-- <div fxLayout="row" fxLayoutAlign="space-between center" fxLayoutGap="20px" class="stats-cards">
+<!--<div fxLayout="row" fxLayoutAlign="space-between center" fxLayoutGap="20px" class="stats-cards">
     <div *ngFor="let dsl of course_list">
         <mat-card fxFlex="25" [routerLink]="['/coursePage',dsl.key]">
              {{dsl.value}}
         </mat-card>
     </div>
     
-</div> -->
+</div>-->
+
+
+  
 
 <div fxLayout="row" fxLayoutAlign="space-between center" fxLayoutGap="20px">
     <div *ngFor="let dsl of course_list">    
     <mat-card  class="example-card" [routerLink]="['/coursePage',dsl.key]">
     <mat-card-header>
-      <mat-card-title>ENGLISH</mat-card-title>
+      <mat-card-title>{{dsl.value}}</mat-card-title>
       <mat-card-subtitle>CLASS 10</mat-card-subtitle>
     </mat-card-header>
     <img class="course-image" mat-card-image src="https://www.english-learn-online.com/wp-content/uploads/alphabet-featured-1230x660-696x373.jpg">
     <mat-card-content>
-      <p>
-        This is our English Class description.
-      </p>
+      
     </mat-card-content>
     <mat-card-actions>
-      <button mat-button>EDIT</button>
-      <button mat-button>NOTIFICATION</button>
+     
     </mat-card-actions>
     </mat-card>
   </div>

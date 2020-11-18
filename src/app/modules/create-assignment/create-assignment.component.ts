@@ -111,7 +111,7 @@ public onDate(event){
   //this.lamdba_url= "https://3kqv8usajd.execute-api.us-east-1.amazonaws.com/Stage";
   this.lamdba_url=environment.lambda_course_assign_url;
        
-  this.httpClient.get(this.lamdba_url+'/' +this.course+'/'+this.name+'/'+this.date,{responseType:'json'}).subscribe((data)=>{
+  this.httpClient.get(this.lamdba_url +this.course+'/'+this.name+'/'+this.date,{responseType:'json'}).subscribe((data)=>{
         console.log(data);
       });;
     

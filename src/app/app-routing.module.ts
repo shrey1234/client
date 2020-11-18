@@ -6,10 +6,9 @@ import { PostsComponent } from './modules/posts/posts.component';
 import { PaymentComponent } from './modules/payment/payment.component';
 import { CourseComponent } from './modules/course/course.component';
 import { CoursepageComponent } from './modules/coursepage/coursepage.component';
+import { NoticeComponent } from './modules/notice/notice.component';
+import { StudentComponent } from './modules/student/student.component';
 import { CreateAssignmentComponent } from './modules/create-assignment/create-assignment.component';
-
-
-
 import { LandingComponent }  from './modules/landing/landing.component';
 
 const routes: Routes = [{
@@ -21,10 +20,10 @@ const routes: Routes = [{
     {path:'posts',component: PostsComponent,},
     {path:'fees',component: PaymentComponent,},
     {path:'course',component: CourseComponent,},
+    {path:'notice',component: NoticeComponent,},
+    {path:'student',component: StudentComponent,},
     {path:'coursePage/:id',component: CoursepageComponent,},
     {path:'createAssignment/:id',component: CreateAssignmentComponent,},
-
-
 
   ]
 }];

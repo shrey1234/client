@@ -4,11 +4,14 @@
 
 export const environment = {
   production: false,
-  accessKeyId: "xxxxxxxxxxx",
-  secretAccessKey: "xxxxxxxxxxxx",
+  accessKeyId: "xxxxxxxxxxxxxx",
+  secretAccessKey: "xxxxxxxxxxxxxx",
   lambda_courses_url:"https://b5y0xxipnj.execute-api.us-east-1.amazonaws.com/Stage/courses/",
   lambda_course_assign_url :"https://b5y0xxipnj.execute-api.us-east-1.amazonaws.com/Stage/",
   lambda_role_url: "https://2avba4sn0a.execute-api.us-east-1.amazonaws.com/dev/role/",
+  lambda_fees_fetch_url: "https://b5y0xxipnj.execute-api.us-east-1.amazonaws.com/Stage/fetch-fees/",
+  lambda_fees_update_url :"https://b5y0xxipnj.execute-api.us-east-1.amazonaws.com/Stage/fees/",
+
 
 };
 
