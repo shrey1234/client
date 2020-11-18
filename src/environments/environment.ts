@@ -14,7 +14,9 @@ export const environment = {
   lambda_notice_add:"https://b5y0xxipnj.execute-api.us-east-1.amazonaws.com/dev/notification/",
   s3_bucket_url:"https://dogs-images-bucket.s3.amazonaws.com/",
   bucket_name:"dogs-images-bucket",
+  
 };
+
 
 /*
  * For easier debugging in development mode, you can import the following file
