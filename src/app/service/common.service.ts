@@ -31,9 +31,9 @@ export class CommonService {
       C2: 'Computers_2',
       C3: 'Computers_3',
   
-      H1: 'Hindi_1',
-      H2: 'Hindi_2',
-      H3: 'Hindi_3',
+      H1: 'History_1',
+      H2: 'History_2',
+      H3: 'History_3',
   
       S1: 'Science_1',
       S2: 'Science_2',

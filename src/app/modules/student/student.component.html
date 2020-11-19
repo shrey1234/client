@@ -13,16 +13,14 @@
     <input type="text" id="parentid" name="parentid" #parentid><br><br>
     
     
-    <label for="courses">Courses</label><br>
+   <label for="courses">Courses</label><br>
     <select id="courses" name="courses" size="8" [(ngModel)]="selectedCars" multiple >
 
-        <option *ngFor="let item of this.common.subjectArray | keyvalue" Value="{{item.key}}">{{ item.value }}</option>
+        <option *ngFor="let item of this.common.subjectArray | keyvalue" value={{item.key}}>{{ item.value }}</option>
     </select>
 
-   
+
     <p>Hold down the Ctrl (windows) or Command (Mac) button to select multiple courses.</p>
-   
-    
     <input type="submit" value="Submit" (click)="addStudent(fname.value,lname.value,email.value,parentid.value)" >
 </div>
 

@@ -14,7 +14,13 @@ export const environment = {
   lambda_notice_add:"https://b5y0xxipnj.execute-api.us-east-1.amazonaws.com/dev/notification/",
   s3_bucket_url:"https://dogs-images-bucket.s3.amazonaws.com/",
   bucket_name:"dogs-images-bucket",
+  lambda_notice_fetch:"https://b5y0xxipnj.execute-api.us-east-1.amazonaws.com/dev/notification/fetch",
+  lambda_student_add:"https://b5y0xxipnj.execute-api.us-east-1.amazonaws.com/dev/create/student/",
   
+  //student_id=amulya&student_name=amulya kurra&parent_id=amulya_p&parent_name=amulya_parent&
+ // courses=M1&courses=H1&courses=C1&courses=S1&due_fee=4000",
+  lambda_teacher_add:"https://b5y0xxipnj.execute-api.us-east-1.amazonaws.com/dev/create/teacher/",
+  //teacher_id=prasanth&teacher_name=prasanth mishra&courses=H1&courses=H2&courses=H3",
 };
 
 

@@ -21,7 +21,7 @@ export class NoticeComponent implements OnInit {
   
   this.httpClient.get(this.lambda_notice_add+"?&content="+content+"&title="+title+"&expiry_date="+expiry_date,{responseType:'json'}).subscribe((data)=>{
   console.log(data);
-  });;
+  });
 
 }
 }
