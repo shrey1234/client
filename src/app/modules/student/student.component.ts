@@ -22,14 +22,15 @@ export class StudentComponent implements OnInit {
     console.log();
   }
 
-  addStudent(fname,lname,email,parentid): void {
+  addStudent(fname,lname,email,parentid,pemail): void 
+  {
 
     var courses="";
     this.selectedCars.forEach(function (value) {
       courses=courses+"&courses="+value;
     }); 
 
-     const student_url= this.lambda_student_add+"?student_id="+fname+"&student_name="+fname+"&parent_id="+parentid+
+    const student_url= this.lambda_student_add+"?student_id="+fname+"&student_name="+fname+"&parent_id="+parentid+
     "&parent_name="+parentid+courses+"&due_fee=4000";
    
     console.log(student_url);
@@ -38,6 +39,10 @@ export class StudentComponent implements OnInit {
       alert("Student added successfully");
 
     });;
+
+    this.common.createUserInCognito(fname,email);
+    this.common.createUserInCognito(parentid,pemail);
+
   }
 
   

@@ -28,5 +28,6 @@ export class TeacherComponent implements OnInit {
     this.httpClient.get(teacher_url,{responseType:'json'}).subscribe((data)=>{
         alert("Teacher added successfully");
     });;
+    this.common.createUserInCognito(tname,email);
   }
 }

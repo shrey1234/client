@@ -12,13 +12,13 @@ export class CommonService {
    s3=new AWS.S3({
     accessKeyId: environment.accessKeyId,
   secretAccessKey: environment.secretAccessKey,
-  region:"us-east-1"
+  region:environment.region
   }); 
   dynamo=new AWS.DynamoDB(
     { 
      accessKeyId: environment.accessKeyId,
      secretAccessKey: environment.secretAccessKey,
-     region:"us-east-1"
+     region:environment.region
     });
     public docClient:any
     
@@ -46,10 +46,43 @@ export class CommonService {
     AWS.config.update({
       accessKeyId: environment.accessKeyId,
       secretAccessKey: environment.secretAccessKey,
-      region:"us-east-1"
+      region:environment.region
     });
-     this.docClient = new AWS.DynamoDB.DocumentClient({region:"us-east-1"});
+     this.docClient = new AWS.DynamoDB.DocumentClient({region:environment.region});   
+   }
 
+   createUserInCognito(username,email)
+   {
+    AWS.config.update({
+      accessKeyId: environment.sh_accessKeyId,
+      secretAccessKey: environment.sh_secretAccessKey,
+      region:environment.region});
+
+    const COGNITO_CLIENT = new AWS.CognitoIdentityServiceProvider({
+        apiVersion: "2016-04-19",
+        region: environment.region
+      });
+      
+    var poolData = {
+          UserPoolId: environment.userpoolid,
+          Username: username,
+          DesiredDeliveryMediums: ["EMAIL"],
+          TemporaryPassword: environment.temp_password,
+          UserAttributes: [
+            {
+              Name: "email",
+              Value: email
+            },
+            {
+              Name: "email_verified",
+              Value: "true"
+            }
+          ]
+        };
+    COGNITO_CLIENT.adminCreateUser(poolData, (error, data) => {
+          console.log(error);
+          console.log(data);
+    });
    }
 
   
