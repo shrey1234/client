@@ -48,9 +48,12 @@ public email:string='';
   getEmail()
   {
     Auth.currentUserInfo().then((userinfo)=>{
-      const { attributes = {} } = userinfo;
-      this.email=attributes['email'];
-      localStorage.setItem('email', this.email);
+      if(userinfo!=null)
+      {
+         const { attributes = {} } = userinfo;
+         this.email=attributes['email'];
+         localStorage.setItem('email', this.email);
+      }
 
     })
   }

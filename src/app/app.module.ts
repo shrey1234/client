@@ -50,6 +50,7 @@ import { TeacherComponent } from './modules/teacher/teacher.component';
     MatCardModule,
     FlexLayoutModule,
     FormsModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

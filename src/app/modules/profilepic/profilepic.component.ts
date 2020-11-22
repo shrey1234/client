@@ -14,9 +14,12 @@ export class ProfilepicComponent implements OnInit {
   ngOnInit(): void {
   }
  
-  onFileChanged(event) {
+ onFileChanged(event) {
     this.selectedFile = event.target.files[0]
-    this.name=this.selectedFile.name;
+    if(this.selectedFile != null)
+    {
+      this.name=this.selectedFile.name;
+    }
     //console.log(this.selectedFile.name);
   }
 
