@@ -6,8 +6,8 @@ export const environment = {
   production: false,
   accessKeyId: "xxxxxxxxxxxxxxx",
   secretAccessKey: "xxxxxxxxxxxxxxx",
-  sh_accessKeyId:"xxxxxxxxxxxxxxx",
-  sh_secretAccessKey:"xxxxxxxxxxxxxxx",
+  sh_accessKeyId:"xxxxxxxxxxxxxxxx",
+  sh_secretAccessKey:"xxxxxxxxxxxxxxxx",
   lambda_courses_url:"https://b5y0xxipnj.execute-api.us-east-1.amazonaws.com/Stage/courses/",
   lambda_course_assign_url :"https://b5y0xxipnj.execute-api.us-east-1.amazonaws.com/Stage/",
   lambda_role_url: "https://2avba4sn0a.execute-api.us-east-1.amazonaws.com/dev/role/",
@@ -18,10 +18,12 @@ export const environment = {
   lambda_notice_fetch:"https://b5y0xxipnj.execute-api.us-east-1.amazonaws.com/dev/notification/fetch",
   lambda_student_add:"https://b5y0xxipnj.execute-api.us-east-1.amazonaws.com/dev/create/student/",
   lambda_teacher_add:"https://b5y0xxipnj.execute-api.us-east-1.amazonaws.com/dev/create/teacher/",
-  bucket_name:"dogs-images-bucket",
+ // bucket_name:"dogs-images-bucket",
+  bucket_name:"webschoolclient",
   temp_password:"12345678",
   region:"us-east-1",
   userpoolid:"us-east-1_EpnRlUNBe",
+  identitypoolid:"us-east-1:05e74d16-eb0f-42da-8ae3-18e24386894a"
 };
 
 

@@ -26,7 +26,8 @@ export class TeacherComponent implements OnInit {
     const teacher_url= this.lambda_teacher_add+"?teacher_id="+tname+"&teacher_name="+tname+courses;
     console.log(teacher_url);
     this.httpClient.get(teacher_url,{responseType:'json'}).subscribe((data)=>{
-        alert("Teacher added successfully");
+      alert("Teacher added successfully");
+
     });;
     this.common.createUserInCognito(tname,email);
   }

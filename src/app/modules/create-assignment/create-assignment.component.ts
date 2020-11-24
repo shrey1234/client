@@ -82,11 +82,15 @@ public onDate(event){
   //Uploading files to the bucket
     this.common.s3.upload(params, function(err, data) {
       if (err) {
+          console.log(err);
           throw err;
       }
+      else{
+        console.log(data);
+      }
       console.log(" File uploaded successfully. ",data.Location);
-  }
-  );
+  });
+  
   this.url=environment.s3_bucket_url+this.course+"/"+this.name+"."+this.ext;
 
   console.log("u is",this.url);

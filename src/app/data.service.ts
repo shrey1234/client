@@ -1,10 +1,11 @@
 import { Injectable } from '@angular/core';
 import {HttpClient } from '@angular/common/http';
-import { Auth, auth0SignInButton } from 'aws-amplify'
+import { Auth } from 'aws-amplify'
 import Amplify, { API } from 'aws-amplify';
 import { threadId } from 'worker_threads';
 import { environment } from '../environments/environment';
-
+import * as AWS from 'aws-sdk';
+import { CognitoUser, CognitoUserPool } from 'amazon-cognito-identity-js';
 
 @Injectable({
   providedIn: 'root'
@@ -19,6 +20,10 @@ public email:string='';
   constructor(private httpClient: HttpClient) {
     this.getUsernameRole();
     this.getEmail();
+    Auth.currentSession().then(ses=>{
+        localStorage.setItem('jwt', ses.getIdToken().getJwtToken());
+      });
+ 
 }
    public getRole()
    {
