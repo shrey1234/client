@@ -23,7 +23,19 @@ export const environment = {
   temp_password:"12345678",
   region:"us-east-1",
   userpoolid:"us-east-1_EpnRlUNBe",
-  identitypoolid:"us-east-1:05e74d16-eb0f-42da-8ae3-18e24386894a"
+  identitypoolid:"us-east-1:05e74d16-eb0f-42da-8ae3-18e24386894a",
+
+  logout_url: "https://schoolweb.auth.us-east-1.amazoncognito.com/logout?client_id=25eulrabo38ta954clqned59qj&logout_uri=http://localhost:4200/",
+  login_url: "https://schoolweb.auth.us-east-1.amazoncognito.com/login?response_type=code&client_id=25eulrabo38ta954clqned59qj&redirect_uri=http://localhost:4200/user",
+
+
+  //logout_url: "https://schoolweb.auth.us-east-1.amazoncognito.com/logout?client_id=25eulrabo38ta954clqned59qj&logout_uri=https://d38yfrp9xyii4h.cloudfront.net/",
+  //login_url: "https://schoolweb.auth.us-east-1.amazoncognito.com/login?response_type=code&client_id=25eulrabo38ta954clqned59qj&redirect_uri=https://d38yfrp9xyii4h.cloudfront.net/user",
+  login_link: "http://localhost:4200/user",
+  logout_link: "http://localhost:4200/",
+
+  //login_link: "https://d38yfrp9xyii4h.cloudfront.net/user",
+  //logout_link: "https://d38yfrp9xyii4h.cloudfront.net/",
 };
 
 

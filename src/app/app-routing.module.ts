@@ -25,9 +25,10 @@ const routes: Routes = [{
     {path:'notice',component: NoticeComponent,},
     {path:'student',component: StudentComponent,},
     {path:'teacher',component: TeacherComponent,},
-
     {path:'coursePage/:id',component: CoursepageComponent,},
     {path:'createAssignment/:id',component: CreateAssignmentComponent,},
+    {path:'**',redirectTo: '',},
+
 
   ]
 }];
