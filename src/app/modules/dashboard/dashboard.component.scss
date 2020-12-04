@@ -1,5 +1,18 @@
-mat-card {
-    height:100px;
-    width:100px;
-    
+
+h1 {
+    text-align: center;
+    font-size: xx-large;
+    font-family: 'Courier New', Courier, monospace;
 }
+h2{
+    text-align: center;
+    font-size: x-large;
+    font-family:'Courier New', Courier, monospace;
+}
+.example-card {
+    max-width: 100px;
+    background-color: #339966;
+    margin-bottom: 10px;
+
+
+  }

@@ -6,7 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {DefaultModule} from './layouts/default/default.module';
+import { DefaultModule } from './layouts/default/default.module';
 
 import { MatButtonModule } from '@angular/material/button';
 import { MatDialogModule } from '@angular/material/dialog';
@@ -24,6 +24,7 @@ import { MatCardModule } from '@angular/material/card';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { SubmissionComponent } from './modules/submission/submission.component';
 import { TeacherComponent } from './modules/teacher/teacher.component';
+import { HelpComponent } from './modules/help/help.component';
 
 @NgModule({
   declarations: [
@@ -38,6 +39,7 @@ import { TeacherComponent } from './modules/teacher/teacher.component';
     StudentComponent,
     SubmissionComponent,
     TeacherComponent,
+    HelpComponent,
   ], 
   imports: [
     BrowserModule,

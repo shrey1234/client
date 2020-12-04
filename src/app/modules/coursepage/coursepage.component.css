@@ -1,6 +1,6 @@
 .example-card {
     max-width: 300px;
-    background-color: #c27d2e;
+    background-color: #339966;
     margin-bottom: 10px;
 
 
@@ -10,6 +10,6 @@
     float: right;
     display:inline;
     position:initial;
-    background-color: #c27d2e;
+    background-color: #339966;
 
   }

@@ -3,7 +3,7 @@
     <a class='btn btn-default' (click)="onBack()"> Back </a>
   </p>
   <mat-card class="example2-card" >
-  <button mat-button id ="create" *ngIf="this.role === 'student'" [routerLink]="['/createAssignment',id]"> Create assignment</button>
+  <button  *ngIf="this.role === 'teacher'" mat-button id ="create" [routerLink]="['/createAssignment',id]"> Create assignment</button>
 </mat-card>
 
 
@@ -23,7 +23,7 @@
       </mat-card-content>
       <a target="_blank" alt="View" title="View" href={{assign.url}}>View</a>
       <mat-card-actions>
-        <button (click)="openModal(assign.Assignment_name)" mat-button>Submission</button>
+        <button *ngIf="this.role === 'student'" (click)="openModal(assign.Assignment_name)" mat-button>Submission</button>
       </mat-card-actions>
 
       </mat-card>

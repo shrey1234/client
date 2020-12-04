@@ -5,8 +5,6 @@ import {HttpClient } from '@angular/common/http';
 import { environment } from '../../../environments/environment';
 import { Integer } from 'aws-sdk/clients/apigateway';
 
-
-
 @Component({
   selector: 'app-payment',
   templateUrl: './payment.component.html',
@@ -48,9 +46,10 @@ export class PaymentComponent {
   public getFees()
   {
      this.httpClient.get(this.lambda_fees_fetch_url+this.username,{responseType:'json'}).subscribe((data)=>{
-     this.fee_amount=data['Item']['due_fee'];
-     this.fee_amount=this.fee_amount * 100; //change into paisa
-     this.options.amount=this.fee_amount;
+       this.options.amount=data['Item']['due_fee'] * 100;
+     //this.fee_amount=data['Item']['due_fee'];
+     //this.fee_amount=this.fee_amount * 100; //change into paisa
+     //this.options.amount=this.fee_amount;
      });
  }
   constructor(
@@ -66,12 +65,17 @@ export class PaymentComponent {
   }
 
   initPay(): void {
+    //this.getFees();
 
     if(this.options.amount==0)
-    alert('No due amount');
+    {
+      alert('No due amount');
+    }
     else
-    this.rzp = new this.winRef.nativeWindow['Razorpay'](this.options);
-    this.rzp.open();
+    {
+      this.rzp = new this.winRef.nativeWindow['Razorpay'](this.options);
+      this.rzp.open();
+    }
   //  console.log(localStorage.getItem('rzp_device_id'));
    // console.log(localStorage.getItem('rzp_preffered_instruments'));
     //console.log(localStorage.getItem('onComplete'));

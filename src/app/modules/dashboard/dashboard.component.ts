@@ -15,14 +15,25 @@ import { environment } from 'src/environments/environment';
 export class DashboardComponent implements OnInit {
 
 
-  constructor(public http:HttpClient ){ 
-  }
+   constructor(public httpClient:HttpClient) { }
+  notices:any = [];
+
+  public lambda_notice_fetch= environment.lambda_notice_fetch;
 
 
   ngOnInit() {
 
-    //var AWS = require('aws-sdk');
-
+    this.getNotices();
    
   }
+  public getNotices()
+  {
+     this.httpClient.get(this.lambda_notice_fetch,{responseType:'json'}).subscribe((data)=>{
+     
+      for (let index in data['Items']) {
+       this.notices.push({content: data['Items'][index]['content'],expiry_date:data['Items'][index]['expiry_date'],title: data['Items'][index]['title']});
+    }
+    console.log(this.notices);
+     });
+ }
 }
