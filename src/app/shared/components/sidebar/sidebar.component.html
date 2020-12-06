@@ -14,7 +14,7 @@
     <a mat-list-item routerLinkActive="list-item-active" routerLink="/user">Dashboard</a>
     <a *ngIf="this.dataService.role != 'admin'" mat-list-item routerLinkActive="list-item-active" routerLink="/course" >Classes</a>
     <a *ngIf="this.dataService.role == 'admin'" mat-list-item routerLinkActive="list-item-active" routerLink="/notice">Notice Board</a>
-    <a *ngIf="this.dataService.role == 'student' || this.dataService.role == 'parent' mat-list-item routerLinkActive="list-item-active" routerLink="/fees">Fees</a>
+    <a *ngIf="this.dataService.role == 'student' || this.dataService.role == 'parent' " mat-list-item routerLinkActive="list-item-active" routerLink="/fees">Fees</a>
     <a *ngIf="this.dataService.role == 'admin'" mat-list-item routerLinkActive="list-item-active" routerLink="/student">Add Student</a>
     <a *ngIf="this.dataService.role == 'admin'" mat-list-item routerLinkActive="list-item-active" routerLink="/teacher">Add Teacher</a>
 
