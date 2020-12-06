@@ -15,10 +15,14 @@ export class CoursepageComponent implements OnInit {
   id;
   sub;
   public role="";
+  submit;
 
 public lambda_course_assign_url =environment.lambda_course_assign_url
+public lambda_submission_list_url =environment.lambda_submission_list_url
+
 
  assignment:any = [];
+ submission:any =[];
   constructor(private _Activatedroute:ActivatedRoute,
     private _router:Router,private httpClient: HttpClient,public matDialog: MatDialog) {
       this.role=localStorage.getItem('role')
@@ -31,17 +35,37 @@ public lambda_course_assign_url =environment.lambda_course_assign_url
     this.sub=this._Activatedroute.paramMap.subscribe(params => { 
        this.id = params.get('id'); 
        console.log(this.id);
+       this.getSubmissionsList();
        this.getAssignmentList();
       
+      // this.updateSubmission();
+      
    });
+  }
+  
+  public getSubmissionsList()
+   {
+    this.httpClient.get(this.lambda_submission_list_url+ localStorage.getItem('username'),{responseType:'json'}).subscribe((data)=>{
+      if(data[this.id]!=null)
+      { 
+          for(let name in data[this.id])
+          {
+            this.submission.push(data[this.id][name]['Assignment_name'])
+          }
+      }
+      console.log(this.submission)
+      });
   }
   public getAssignmentList()
    {
       this.httpClient.get(this.lambda_course_assign_url+this.id,{responseType:'json'}).subscribe((data)=>{
        console.log(data);
        for (let index in data) {
-       
-          this.assignment.push({due_date: data[index]['due_date'],url:data[index]['url'],Assignment_name: data[index]['Assignment_name']});
+            if((this.submission).indexOf(data[index]['Assignment_name'])!=-1)
+              this.submit="Submitted"
+            else
+              this.submit="Submission Due"  
+          this.assignment.push({due_date: data[index]['due_date'],url:data[index]['url'],Assignment_name: data[index]['Assignment_name'],status: this.submit});
 
        }
        console.log(this.assignment);

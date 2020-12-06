@@ -14,6 +14,8 @@ export const environment = {
   lambda_notice_fetch:"https://b5y0xxipnj.execute-api.us-east-1.amazonaws.com/dev/notification/fetch",
   lambda_student_add:"https://b5y0xxipnj.execute-api.us-east-1.amazonaws.com/dev/create/student/",
   lambda_teacher_add:"https://b5y0xxipnj.execute-api.us-east-1.amazonaws.com/dev/create/teacher/",
+  lambda_submission_list_url:"https://b5y0xxipnj.execute-api.us-east-1.amazonaws.com/Stage/submitted/",
+
  // bucket_name:"dogs-images-bucket",
   bucket_name:"webschoolclient",
   temp_password:"12345678",

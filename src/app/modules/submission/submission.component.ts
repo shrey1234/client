@@ -36,6 +36,7 @@ export class SubmissionComponent implements OnInit {
    }
 
   ngOnInit(): void {
+    
   }
   public onFileChange(event) {
     const reader = new FileReader();
@@ -69,6 +70,24 @@ export class SubmissionComponent implements OnInit {
       }
       console.log("Solution submitted successfully. ",data.Location);
   });
+
+  const pa = {
+    Bucket: environment.bucket_name,
+    Key: this.course+"/"+this.name+"_submissions/"+this.user+"."+this.ext, // File name you want to save as in S3
+    Body: this.file,
+    ACL: 'public-read',
+    ContentType: this.fileType,
+    ContentDisposition: 'Inline'
+  };
+  this.common.s3.upload(pa, function(err, data) {
+    if (err) {
+        throw err;
+    }
+
+    console.log("Solution submitted successfully to submissions. ",data.Location);
+  });
+
+
   this.url=environment.s3_bucket_url+this.user+"/"+this.course+"/"+this.name+"."+this.ext;
   this.lamdba_url= environment.lambda_course_assign_url;
   this.httpClient.get(this.lamdba_url+'submit/'+this.user +"/"+this.course+'/'+this.name+"."+this.ext,{responseType:'json'}).subscribe((data)=>{
